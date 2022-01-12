@@ -83,3 +83,62 @@ hr{
     font-size: 16px;
     color:#562EFF;
 }
+
+/* course styles */
+.courses{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 24px;
+}
+
+.course .course-banner img{
+    width: 224px;
+    height: 104px;
+}
+.course-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.fa-star.filled{
+    color: gold;
+}
+.fa-star.empty{
+    color: gray;
+}
+.course-duration{
+    color: honeydew;
+    padding: 5px;
+    background-color: grey;
+    border-radius: 51px;
+}
+
+/*----------
+ media quary
+ ----------- */
+
+ /* mobile device */
+ @media only screen and (max-width:668px) {
+     .container{
+         width: 100%;
+     }
+     .players, .blogs, .courses{
+         
+         grid-template-columns: repeat(1,1fr);
+     }
+     .player, .blog{
+         flex-direction: column;
+     }
+     
+ }
+
+ /* tablate device */
+
+ @media only screen and (min-width:688px) and (max-width:992px) {
+     .container{
+         width: 100%;
+     }
+     .players, .courses{
+         grid-template-columns: repeat(2, 1fr);
+     }
+ }
